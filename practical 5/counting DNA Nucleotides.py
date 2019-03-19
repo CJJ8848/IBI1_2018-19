@@ -18,7 +18,7 @@ print (mydict)
 import matplotlib.pyplot as plt
 
 labels = 'A','T','C','G'
-sizes = [int(mydict['A']),int(mydict['T']), int(mydict['C']), int(mydict['G']) ]
+sizes = [mydict['A'],mydict['T'], mydict['C'], mydict['G'] ]
 explode = (0,0,0,0)
 plt.pie(sizes, explode=explode, labels =labels, autopct = '%1.1f%%', shadow = True, startangle= 90)
 plt.axis('equal')
