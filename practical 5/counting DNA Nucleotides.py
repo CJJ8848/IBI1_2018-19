@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 # give the labels
 labels = 'A','T','C','G'
 # give the sizes of labels
-sizes = [mydict['A'],mydict['T'], mydict['C'], mydict['G'] ]
+sizes = mydict.values()
 # choose which labels to go out of a pie
 explode = (0,0,0,0)
 # autopct : means the number will in the shape of 1.0, 
