@@ -11,10 +11,11 @@ DNA = input ('give me a sequence of DNA: ')
 mydict = {}
 # show the times words appear
 for word in DNA :
-    if word in mydict :
-        mydict[word] += 1
-    else :
-        mydict[word] = 1
+    if word in ['A','T','C','G'] :
+        if word in mydict :
+            mydict[word] += 1
+        else :
+            mydict[word] = 1
 # output
 print (mydict)
 # get a plot
