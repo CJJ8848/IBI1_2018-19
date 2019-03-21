@@ -10,6 +10,7 @@ DNA = input ('give me a sequence of DNA: ')
 # construct mydict
 mydict = {}
 # show the times words appear
+# if word in ['A','T','C','G'] : can allow you to input letters except ATCG
 for word in DNA :
     if word in ['A','T','C','G'] :
         if word in mydict :
@@ -21,11 +22,11 @@ print (mydict)
 # get a plot
 import matplotlib.pyplot as plt
 # give the labels
-labels = 'A','T','C','G'
+labels = mydict.keys()
 # give the sizes of labels
 sizes = mydict.values()
-# choose which labels to go out of a pie
-explode = (0,0,0,0)
+# it can allow you to input a DNA with just one or two letters (e.g. ATTT)
+explode = [0]*len(labels)
 # autopct : means the number will in the shape of 1.0, 
 # shadow: choose whether pie has shadow 
 # startangle : it is beautiful if the startgngle is 90
