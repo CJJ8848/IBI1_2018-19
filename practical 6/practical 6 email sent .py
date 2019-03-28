@@ -18,7 +18,8 @@ for line in f :
     address = line[1]
     subject = line[2]
 # choose the legal address    
-    if re.findall(r'(\S+@\d+\w+)',address):
+    if re.findall(r'(\w+@\w+\.\w+)',address):
+        print (address,': correct address')
 # send emails        
         import smtplib
         from email.mime.text import MIMEText
@@ -50,7 +51,7 @@ for line in f :
             print ('Email sent successfully')
         except smtplib.SMTPException:
             print ("Error:Unable to send email")
-       
+
     
         
         
