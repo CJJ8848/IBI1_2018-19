@@ -14,7 +14,7 @@ for i in n:
      if int(i) >=24:
          print('The input number must be integers from 1 to 23')
         
-   
+r=0   
 if int(i)<=24:
 
     def compute(x,y,op):
@@ -29,6 +29,8 @@ if int(i)<=24:
         ret = []
         p = permutations(p) if iter==0 else [p]
         for array_n in p:
+            global r
+            r=r+1
             #print(array_n)
             for num in range(1,len(array_n)):
                 ret1 = exp(array_n[:num],iter+1)
@@ -47,4 +49,4 @@ if int(i)<=24:
                                 return 'yes'#''.join(e+'/n' for x,e in ret if x==24),
         return ret
     print(exp(m))
-    print('recursion tomes:',i)
+    print('recursion times:',r)
