@@ -5,9 +5,12 @@ Created on Wed Apr  3 08:59:25 2019
 
 @author: cuijiajun
 """
-
+# inout
 n =input('Please input numbers to computer 24 and use comma to divide them:')
+# split with comma to make n a list
 n = n.split(',')
+#print (n)
+# judge whether the numbers are smaller than 24
 m=[]
 for i in n:
      m.append(int(i))
@@ -16,11 +19,13 @@ for i in n:
          break
 if int(i)<=24:
     r=0
+# a function about the operator    
     def compute(x,y,op):
         if op=='+':return x+y
         elif op=='*':return x*y
         elif op=='-':return x-y
         else:return x/y if y else None
+# a function about permutation 
     def exp(p,iter=0):
     
         from itertools import permutations
