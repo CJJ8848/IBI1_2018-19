@@ -31,6 +31,8 @@ with open('BLOSUM62.txt') as matrix_file:
 
 seq1 = list(seq1)
 seq2 = list(seq2)
+seq3 = list(seq3)
+
 
 score_x = 0
 score_y = 0
