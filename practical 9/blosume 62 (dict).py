@@ -149,34 +149,20 @@ blosum62 = {
                   'K':  1, 'M': -1, 'L': -3, 'N':  0, 'Q':  3,
                   'P': -1, 'S':  0, 'R':  0, 'T': -1, 'W': -3,
                   'V': -2, 'Y': -2, 'X': -1, 'Z': 4}}
-
-seq1 = list(seq1)
-seq2 = list(seq2)
-seq3 = list(seq3)
-score_x = 0
-score_y = 0
-score_z = 0
-edit_distance_x = 0
-edit_distance_y = 0
-edit_distance_z = 0
-for i in range(len(seq1)):
-    x = blosum62[seq1[i]][seq2[i]]
-    y = blosum62[seq1[i]][seq3[i]]
-    z = blosum62[seq3[i]][seq2[i]]
-    score_x +=int(x)
-    score_y +=int(y)
-    score_z +=int(z)
-    if seq1[i]!=seq2[i]:
-       edit_distance_x += 1
-    if seq1[i]!=seq3[i]:
-       edit_distance_y += 1
-    if seq3[i]!=seq2[i]:
-       edit_distance_z += 1
-      
-print ('score of 1,2:',score_x)
-print ('edit_distance_x:',edit_distance_x)
-print ('score of 1,3:',score_y)
-print ('edit_distance_y:',edit_distance_y)
-print ('score of 2,3:',score_z)
-print ('edit_distance_z:',edit_distance_z)   
-
+def sc_di(sq1,sq2):
+    sq1 = list(sq1)
+    score = 0
+    edit_distance = 0
+    for i in range(len(sq1)):
+        x = blosum62[sq1[i]][sq2[i]]
+        score +=int(x)
+        if sq1[i]!=sq2[i]:  
+            edit_distance += 1      
+    print ('score :',score)
+    print ('distance :',edit_distance)
+print('seq1 compared with seq2')
+sc_di(seq1,seq2)
+print('seq1 compared with seq3')
+sc_di(seq1,seq3)
+print('seq2 compared with seq3')
+sc_di(seq2,seq3)
