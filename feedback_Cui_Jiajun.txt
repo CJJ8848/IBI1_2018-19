@@ -1,0 +1,74 @@
+# This is your formative feedback for the IBI1 portfolio.
+
+
+## Please do the following:
+
+- [ ] Add this file to your GitHub fork of IBI1_2018-19. You are allowed to delete the last line (giving your score) before uploading the file to GitHub, if you do not want others to see it. 
+- [ ] Make changes to your code from weeks 3 to 5 according to the feedback below. This will form part of your summative assessment. (You may use the checkboxes to keep track of your progress) 
+
+
+## Feedback:
+
+### Feedback Week 3:
+
+
+
+
+
+
+
+- [ ] The file Introductions.txt should be changed from an Introduction to Mela to an Introduction to yourself. Make sure you have pushed your local changes to your GitHub repo
+
+- [ ] There should be a file called thingsIlike.txt containing a list of things you like.
+
+
+- [ ] Your folder for Practical 3 shuold contain a file called Reflection.txt with a short reflection on how the practical went, what you learned and what you found difficult
+
+
+-   [ ] Commit messages should contain information about what changes were made in the most recent commit. A message such as “all tasks” is not a helpful commit message
+
+
+
+
+### Feedback Week 4:
+
+
+
+
+- [ ] The second part of the variables.py exercise is missing: It should define Booleans X, Y, Z, and W, as laid out in the practical instructions.
+
+
+
+- [ ] In file  collatz.py, pseudocode should be use to explain and document your code.
+
+
+
+
+
+- [ ] In the "powers of 2" exercise, pseudocode should be used to explain and document your code.
+- [ ]  The powers of 2 exercise is mathematically correct, but would be better if the answer did not have a "+" at the end. 
+
+
+
+
+### Feedback Week 5:
+
+The code for week 5 is great. There is no need to change anything. 
+
+
+
+
+
+
+This asssesment is formative and does not form part of your final grade. 
+
+If this was a summative assessment, you would have scored 69 out of 100
+
+
+
+
+
+
+
+
+
