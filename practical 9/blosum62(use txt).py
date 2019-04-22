@@ -25,12 +25,23 @@ with open('BLOSUM62.txt') as matrix_file:
         matrix[row_name] = {}
         for column_name in columns:
             matrix[row_name][column_name] = entries.pop(0)
+<<<<<<< HEAD
+=======
+
+
+        
+
+>>>>>>> master
 def sc_di(sq1,sq2):
     sq1 = list(sq1)
     score = 0
     edit_distance = 0
     for i in range(len(sq1)):
+<<<<<<< HEAD
         x = matrix[sq1[i]][sq2[i]]
+=======
+        x = blosum62[sq1[i]][sq2[i]]
+>>>>>>> master
         score +=int(x)
         if sq1[i]!=sq2[i]:  
             edit_distance += 1      
