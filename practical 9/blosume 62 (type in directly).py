@@ -151,20 +151,24 @@ blosum62 = {
                   'P': -1, 'S':  0, 'R':  0, 'T': -1, 'W': -3,
                   'V': -2, 'Y': -2, 'X': -1, 'Z': 4}}
 
+# a function to mark according to the dict
 def sc_di(sq1,sq2):
+# score part   
     sq1 = list(sq1)
     score = 0
     edit_distance = 0
     for i in range(len(sq1)):
         x = blosum62[sq1[i]][sq2[i]]
         score +=int(x)
+# distance part
         if sq1[i]!=sq2[i]:  
             edit_distance += 1      
     print ('score :',score)
     print ('distance :',edit_distance)
-print('seq1 compared with seq2')
+# print scores of three combinations    
+print('compare seq1 with seq2')
 sc_di(seq1,seq2)
-print('seq1 compared with seq3')
+print('compare seq1 with seq3')
 sc_di(seq1,seq3)
-print('seq2 compared with seq3')
+print('compare seq2 with seq3')
 sc_di(seq2,seq3)

@@ -16,6 +16,7 @@ def Child (id , resultSet):
             if parent.childNodes[0].data == id:
                 resultSet.add(geneid)
                 Child(geneid, resultSet)
+# a function to write excel
 def write_excel_xlsx(path, sheet_name, value):
     index = len(value)
     workbook = openpyxl.Workbook()
@@ -28,16 +29,19 @@ def write_excel_xlsx(path, sheet_name, value):
     print("success!")
 import re
 import xml.dom.minidom
+# read go_obo.xml 
 DOMTree = xml.dom.minidom.parse ("go_obo.xml")
 collection = DOMTree.documentElement
 terms = collection.getElementsByTagName ("term")
+# a list called geneslist and another one called genelist
 geneslist = [["id", "name", "defination","count"],]
 genelist = []
+# get the value of id, name and defstr
 for term in terms:
     id = term.getElementsByTagName ("id")[0].childNodes[0].nodeValue
     name = term.getElementsByTagName ("name")[0].childNodes[0].nodeValue
     defstr = term.getElementsByTagName ("defstr")[0].childNodes[0].nodeValue
-       
+# search for autophagosome in defstr      
     if re.search('autophagosome',defstr):
         resultSet = set()
         Child(id,resultSet)
@@ -46,7 +50,10 @@ for term in terms:
         geneslist.append (genelist)
 
 import openpyxl
+# name of excel sheet
 book_name_xlsx = 'autophagosome (myself).xlsx'
 sheet_name_xlsx = 'autophagosome genes' 
-value =  geneslist#elementCount]]
+# value is the list called geneslist
+value =  geneslist
+# write in
 write_excel_xlsx(book_name_xlsx, sheet_name_xlsx, value)
