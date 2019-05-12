@@ -1,0 +1,69 @@
+# I have changed my codes and added some pseudocodes to my portfolio from weeks 3 to 5 according to the feedback.
+# for week 3, The file Introductions.txt has been changed to an introduction to myself.
+# the thingsilike.txt has been added as well.
+# I have added the Reflection.txt of week 3.
+#for the commit messages, I have turned to teacher, but still can not change them. however, I am careful about the commit messages now.
+#for week 4, variables.py has been added.
+# I have add some pseudocodes in every file. 
+#In the "powers of 2" exercise, the answer did not have a "+" at the end now.
+# for week 5, it was OK. therefore no change.
+
+--------------------------------
+following by the feedback.txt
+'''
+## Feedback:
+
+### Feedback Week 3:t
+
+
+
+
+
+
+
+- [ ] The file Introductions.txt should be changed from an Introduction to Mela to an Introduction to yourself. Make sure you have pushed your local changes to your GitHub repo
+
+- [ ] There should be a file called thingsIlike.txt containing a list of things you like.
+
+
+- [ ] Your folder for Practical 3 shuold contain a file called Reflection.txt with a short reflection on how the practical went, what you learned and what you found difficult
+
+
+-   [ ] Commit messages should contain information about what changes were made in the most recent commit. A message such as “all tasks” is not a helpful commit message
+
+
+
+
+### Feedback Week 4:
+
+
+
+
+- [ ] The second part of the variables.py exercise is missing: It should define Booleans X, Y, Z, and W, as laid out in the practical instructions.
+
+
+
+- [ ] In file  collatz.py, pseudocode should be use to explain and document your code.
+
+
+
+
+
+- [ ] In the "powers of 2" exercise, pseudocode should be used to explain and document your code.
+- [ ]  The powers of 2 exercise is mathematically correct, but would be better if the answer did not have a "+" at the end. 
+
+
+
+
+### Feedback Week 5:
+
+The code for week 5 is great. There is no need to change anything. 
+
+
+
+
+
+
+This asssesment is formative and does not form part of your final grade. 
+
+'''
