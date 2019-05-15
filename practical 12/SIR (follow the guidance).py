@@ -50,7 +50,6 @@ plt.plot(Rarr[:], label='Recovered')
 plt.title('SIR Model')
 plt.xlabel('Time')
 plt.ylabel('number of people')
-plt.xlabel('Time')
 plt.legend()
 # save figure
 plt.savefig('SIR Model 1' ,type='png')
