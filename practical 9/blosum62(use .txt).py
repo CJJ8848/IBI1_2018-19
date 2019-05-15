@@ -36,13 +36,16 @@ def sc_di(sq1,sq2):
         score +=int(x)
 # distance part
         if sq1[i]!=sq2[i]:  
-            edit_distance += 1      
+            edit_distance += 1  
+# %identity 
+    print('%identity :',(1-int(edit_distance)/len(sq1))*100,'%')
     print ('score :',score)
     print ('distance :',edit_distance)
+
 # print scores of three combinations    
-print('compare seq1 with seq2')
-sc_di(seq1,seq2)
-print('compare seq1 with seq3')
-sc_di(seq1,seq3)
-print('compare seq2 with seq3')
+print('compare human seq1 with mouse seq2')
+sc_di(seq1,seq2)    
+print('compare mouse seq2 with random seq3')
 sc_di(seq2,seq3)
+print('compare random seq3 with human seq1')
+sc_di(seq3,seq1)

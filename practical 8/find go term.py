@@ -5,6 +5,7 @@ Created on Tue Apr  9 17:38:23 2019
 
 @author: cuijiajun
 """
+#a function to count childnodes 
 def Child (id , resultSet):
     for term in terms:
         # parents is a list containing all parents of one term
@@ -57,3 +58,5 @@ sheet_name_xlsx = 'autophagosome genes'
 value =  geneslist
 # write in
 write_excel_xlsx(book_name_xlsx, sheet_name_xlsx, value)
+
+
