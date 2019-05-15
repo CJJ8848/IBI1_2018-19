@@ -1,0 +1,2 @@
+Firstly, permute the inputed numbers. For each loop, divide the permuted numbers into two parts bounded by one number (ret1 for left and ret2 for right) until they can not be divided.  
+secondly, use 4 operators to combine two numbers so that get a new number as an operation result of the two numbers. Then bind this new number to other numbers, continue this loop until getting 24 as result.

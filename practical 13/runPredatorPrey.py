@@ -5,19 +5,19 @@ Created on Wed May 15 09:31:33 2019
 
 @author: cuijiajun
 """
+# import necessary libraries
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+# change the work pathway so that all the files exist in this folder
 os.chdir('/Users/cuijiajun/Desktop/IBI1_2018-19/practical 13')
+# a function used to change xml to cps (from teacher)
 def xml_to_cps():
     import os
-    import xml.dom.minidom
-    
+    import xml.dom.minidom    
     # first, convert xml to cps 
     os.system("/Applications/COPASI/CopasiSE -i predator-prey.xml -s predator-prey.cps")
-    
-    # now comes the painful part. Just copy and paste this ok
-    
+    # now comes the painful part. Just copy and paste this ok    
     cpsTree = xml.dom.minidom.parse("predator-prey.cps")
     cpsCollection = cpsTree.documentElement
     
@@ -56,16 +56,19 @@ def xml_to_cps():
     cpsFile = open("predator-prey.cps","w",encoding='utf-8')
     cpsTree.writexml(cpsFile)
     cpsFile.close()
-#
+# use the function
 xml_to_cps()
-
+# open modelResults.csv
 os.system ('/Applications/COPASI/CopasiSE predator-prey.cps')    
 f = open("modelResults.csv")
+# some lists
 names = []  
 result = []
 results = []
+# read the first line as name
 for i in range(1):
     names = f.readline().strip()
+# read the file to get results of each time point
 for line in f:
     line=line.rstrip('\n')
     line=line.split(',')
@@ -88,7 +91,7 @@ plt.legend()
 plt.savefig(' Time course' ,type='png')
 plt.show()
 
-# second ploting
+# second ploting (limit cycle)
 plt.figure (figsize =(6,4),dpi=150)
 plt.subplot(111)
 # x,y axis
@@ -101,3 +104,21 @@ plt.legend()
 # save figure
 plt.savefig('limit cycle' ,type='png')
 plt.show()
+
+# pseudocode for Changing values and running the simulation again
+#import re
+#import xml.dom.minidom
+# read predator-prey2.xml 
+# read parameter 
+# get the value of k predator breeds, k predator dies, k prey breeds, k prey dies.
+# change them by 
+'''def change_node_properties(nodelist, kv_map, is_delete=False):
+  for node in nodelist:
+    for key in kv_map:
+      if is_delete:
+        if key in node.attrib:
+          del node.attrib[key]
+      else:
+        node.set(key, kv_map.get(key))
+'''
+# then after change the values, follow the normal steps to draw new plots 

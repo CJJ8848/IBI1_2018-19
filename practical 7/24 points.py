@@ -5,7 +5,7 @@ Created on Wed Apr  3 08:59:25 2019
 
 @author: cuijiajun
 """
-# inout
+# input
 n =input('Please input numbers to computer 24 and use comma to divide them:')
 # split with comma to make n a list
 n = n.split(',')
@@ -40,7 +40,7 @@ if int(i)<=24:
             for num in range(1,len(array_n)):
                 r=r+1
                 ret1 = exp(array_n[:num],iter+1)
-                ret2 = exp(array_n[num:],iter+1)
+                ret2 = exp(array_n[num:],iter+1) 
                 for op in operation: 
                     r=r+1
                     for va1,expression in ret1:
