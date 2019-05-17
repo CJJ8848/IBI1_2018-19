@@ -32,15 +32,17 @@ if int(i)<=24:
         if len(p)==1:return [(p[0],str(p[0]))]
         operation = ['+','-','*','/']
         ret = []
+# p permutation 
         p = permutations(p) if iter==0 else [p]
         for array_n in p:
             global r
             r=r+1
-            #print(array_n)
+#for each loop. divide numbers into two parts
             for num in range(1,len(array_n)):
                 r=r+1
                 ret1 = exp(array_n[:num],iter+1)
                 ret2 = exp(array_n[num:],iter+1) 
+# add operation
                 for op in operation: 
                     r=r+1
                     for va1,expression in ret1:
@@ -51,13 +53,16 @@ if int(i)<=24:
                             if va2==None:continue
                             combined_exp = '{}{}' if expression.isalnum() else '({}){}'
                             combined_exp += '{}' if expression2.isalnum() else '({})'
+# get the result (new_val)
                             new_val = compute(va1,va2,op)
                             ret.append((new_val,combined_exp.format(expression,op,expression2)))
+# choose the result (should equal to 24)
                             if iter==0 and new_val==24:
         
                                 return 'yes',''.join(e+'' for x,e in ret if x==24)
         return ret
     import re
+# when search 'yes', print the result print the recursion times
     if re.search(r'yes',str(exp(m))):
         print(exp(m))
         print('recursion times:',r)

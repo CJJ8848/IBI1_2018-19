@@ -108,7 +108,7 @@ plt.show()
 # pseudocode for Changing values and running the simulation again
 #import re
 #import xml.dom.minidom
-# read predator-prey2.xml 
+# read predator-prey.xml 
 # read parameter 
 # get the value of k predator breeds, k predator dies, k prey breeds, k prey dies.
 # change them by 
